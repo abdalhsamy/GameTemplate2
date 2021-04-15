@@ -1,0 +1,523 @@
+/* Start Global Rules */
+
+body {
+    background-color: #0b0c11;
+    color: white;
+    font-family: tahoma;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.line {
+    height: 2px;
+    width: 120%;
+    background-image: linear-gradient(to right, transparent, #bb1344, #7fcb69, #f9e876, #43cbfd, #633fbb, transparent);
+    transform: translatex(-10%);
+}
+
+/* End Global Rules */
+
+/* Start Header */
+
+.header {
+    height: 750px;
+}
+
+.header .container .title {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.header .container .title p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.header .container .title i {
+    margin-right: 15px;
+}
+
+.header .container .slider {
+    position: absolute;
+    width: 100vw;
+    height: 700px;
+    overflow: hidden;
+    text-align: center;
+    background-image: linear-gradient(to top, #0b0c11, transparent, transparent, transparent);
+    top: 0;
+    left: 0;
+}
+
+.header .container .slider input {
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+}
+
+.header .container .slider label {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border: 3px solid #7c7c7c;
+    background-color: #7c7c7c;
+    margin: 670px 6px 0;
+    border-radius: 50%;
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.header .container .slider input:checked+label {
+    border-color: white;
+    background-color: white;
+    box-shadow: 0 0 10px 3px white;
+}
+
+.header .container .slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transform: translatex(-100%);
+    transition: 0.4s;
+}
+
+.header .container .slider input:checked~.slide {
+    transform: translatex(100%);
+}
+
+.header .container .slider input:checked+label+.slide {
+    transform: translatex(0%);
+}
+
+.header .container .slider .bg1 {
+    background-image: url(https://images.wallpapersden.com/image/download/call-of-duty-mobile-2019_a2pmaWiUmZqaraWkpJRmbmdlrWZlbWU.jpg);
+}
+
+.header .container .slider .bg2 {
+    background-image: url(https://images.wallpapersden.com/image/download/raven-fortnite-battle-royale-4k_a2hubWmUmZqaraWkpJRmbmdlrWZlbWU.jpg);
+}
+
+.header .container .slider .bg3 {
+    background-image: url(https://images.wallpapersden.com/image/download/sekiro-shadows-die-twice-4k_a2hua26UmZqaraWkpJRmbmdlrWZlbWU.jpg);
+}
+
+.header .container .slider .bg4 {
+    background-image: url(https://images.wallpapersden.com/image/download/game-assassins-creed-odyssey_a2tnZm6UmZqaraWkpJRmbmdlrWZlbWU.jpg);
+}
+
+.header .container .line {
+    margin-top: 670px;
+}
+
+/* End Header */
+
+/* Start Platform */
+
+.platform {
+    margin-top: 20px;
+}
+
+.platform .container .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #515252;
+}
+
+.platform .container .title .left {
+    display: flex;
+    align-items: center;
+}
+
+.platform .container .title .left p {
+    margin-right: 40px;
+    font-size: 20px;
+    color: white;
+}
+
+.platform .container .title .left i {
+    margin-right: 10px;
+}
+
+.platform .container .title .left span {
+    margin-right: 20px;
+}
+
+.platform .container .title .right i:first-child {
+    margin-right: 30px;
+}
+
+.platform .container .title .right i {
+    border: 1px solid #515252;
+    padding: 5px 7px;
+}
+
+.platform .container .section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.platform .container .section .slide {
+    width: calc((100% - 30px) / 4);
+    height: 400px;
+    background-color: #111518;
+    position: relative;
+}
+
+.platform .container .section .slide .blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #111518, transparent);
+}
+
+.platform .container .section .slide .image {
+    width: calc(100% - 30px);
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 15px;
+    position: relative;
+}
+
+.platform .container .section .slide .image .name {
+    height: 50px;
+    z-index: 1;
+}
+
+.platform .container .section .slide .image .rate {
+    border-radius: 50%;
+    border: 1px solid #515252;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 35px;
+    z-index: 1;
+}
+
+.platform .container .section .slide .type, .platform .container .section .slide .date {
+    margin: 0;
+    margin-left: 15px;
+    color: #515252;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.platform .container .section .slide .price {
+    font-size: 16px;
+}
+
+.platform .container .section .slide .price, .platform .container .section .slide i {
+    margin: 0;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+.platform .container .section .slide i {
+    left: initial;
+    right: 15px;
+    text-align: center;
+    color: #515252;
+}
+
+.platform .container .section .slide .image.bg1 {
+    background-image: url(https://images.wallpapersden.com/image/download/fist-forged-in-shadow-torch-2021_bGtuZ2iUmZqaraWkpJRnamtlrWZpaWU.jpg);
+}
+
+.platform .container .section .slide .image.bg2 {
+    background-image: url(https://images.wallpapersden.com/image/download/endzone-a-world-apart-poster_bGtra26UmZqaraWkpJRobWllrWdma2U.jpg);
+}
+
+.platform .container .section .slide .image.bg3 {
+    background-image: url(https://images.wallpapersden.com/image/download/life-is-strange-remastered-2021_bGtrammUmZqaraWkpJRoamVlrWdnbGU.jpg);
+}
+
+.platform .container .section .slide .image.bg4 {
+    background-image: url(https://images.wallpapersden.com/image/download/prince-of-persia-the-two-thrones_bGtmZmuUmZqaraWkpJRobWllrWdlbG4.jpg);
+}
+
+/* End Platform */
+
+/* Start Pre-Launch */
+
+.pre-launch {
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.pre-launch .container .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pre-launch .container .title .left p {
+    margin-right: 40px;
+    font-size: 20px;
+    color: white;
+}
+
+.pre-launch .container .title .right i:first-child {
+    margin-right: 30px;
+}
+
+.pre-launch .container .title .right i {
+    border: 1px solid #515252;
+    color: #515252;
+    padding: 5px 7px;
+}
+
+.pre-launch .container .slider {
+    width: calc(100% - 100px);
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+}
+
+.pre-launch .container .slider .slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pre-launch .container .slider .slide.bg1 {
+    background-image: url(https://images.wallpapersden.com/image/download/4k-diablo-immortal_bGpuZ2qUmZqaraWkpJRpZW5nrWdma2U.jpg);
+    transform: translatex(calc(-100% - 15px)) translatey(15px);
+    height: calc(100% - 30px);
+    filter: grayscale(1);
+}
+
+.pre-launch .container .slider .slide.bg2 {
+    background-image: url(https://images.wallpapersden.com/image/download/space-crew_bGtlaWiUmZqaraWkpJRmbmdlrWZlbWU.jpg);
+}
+
+.pre-launch .container .slider .slide.bg3 {
+    background-image: url(https://images.wallpapersden.com/image/download/serious-sam_bGpuZ2mUmZqaraWkpJRobWllrWdma2U.jpg);
+    transform: translatex(calc(100% + 15px)) translatey(15px);
+    height: calc(100% - 30px);
+    filter: grayscale(1);
+}
+
+.pre-launch .container .slider .slide.bg1 .blur {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #0b0c11, #0b0c11, #0b0c11, transparent);
+}
+
+.pre-launch .container .slider .slide.bg3 .blur {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to left, #0b0c11, #0b0c11, #0b0c11, transparent);
+}
+
+/* End Pre-Launch */
+
+/* Start Games-Category */
+
+.games-category {
+    margin-top: 100px;
+}
+
+.games-category .container .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pgames-category .container .title .left p {
+    margin-right: 40px;
+    font-size: 20px;
+    color: white;
+}
+
+.games-category .container .title .right i:first-child {
+    margin-right: 30px;
+}
+
+.games-category .container .title .right i {
+    border: 1px solid #515252;
+    color: #515252;
+    padding: 5px 7px;
+}
+
+.games-category .container .section {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 700px;
+    margin-top: 50px;
+}
+
+.games-category .container .section div {
+    height: calc((100% - 15px) / 2);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.games-category .container .section div p {
+    margin: 0;
+    margin-bottom: 24px;
+    color: #ccc;
+}
+
+.games-category .container .section div i {
+    margin: 20px;
+    margin-left: 10px;
+    border: 1px solid #515252;
+    padding: 3px 6px;
+}
+
+.games-category .container .section div:nth-child(1) {
+    width: calc((100% - 15px) * 0.60);
+    background-image: url(https://images.wallpapersden.com/image/download/stalker-2_bGptaGeUmZqaraWkpJRoZ2VlrWZpaWc.jpg);
+}
+
+.games-category .container .section div:nth-child(2) {
+    width: calc((100% - 15px) * 0.40);
+    background-image: url(https://images.wallpapersden.com/image/download/cyberpunk-2077-motorcycle-boogeyman_bGptbWaUmZqaraWkpJRqZmdlrWdmbmg.jpg);
+}
+
+.games-category .container .section div:nth-child(3) {
+    width: calc((100% - 15px) * 0.40);
+    background-image: url(https://images.wallpapersden.com/image/download/senna-league-of-legends-4k-art_bGptZ2yUmZqaraWkpJRobWllrWdma2U.jpg);
+}
+
+.games-category .container .section div:nth-child(4) {
+    width: calc((100% - 15px) * 0.60);
+    background-image: url(https://images.wallpapersden.com/image/download/the-falconeer-2020_bGpqa2eUmZqaraWkpJRmbmdlrWZlbWU.jpg);
+}
+
+/* End Games-Category */
+
+/* Start Footer */
+
+.footer {
+    margin-top: 120px;
+    width: 100%;
+    height: 400px;
+}
+
+.footer .container {
+    height: 100%;
+}
+
+.footer .container .section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.footer .container .section .left {
+    text-align: center;
+    margin-right: 100px;
+}
+
+.footer .container .section .left p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer .container .section .left i {
+    margin: 10px;
+}
+
+.footer .container .section .right {
+    height: calc(100% - 100px);
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+}
+
+.footer .container .section .right div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .container .section .right div h6 {
+    margin: 0;
+    margin-bottom: 35px;
+    font-size: 20px;
+    position: relative;
+    color: #bb1344;
+}
+
+.footer .container .section .right div:nth-child(2) h6 {
+    color: #7fcb69;
+}
+
+.footer .container .section .right div:nth-child(3) h6 {
+    color: #f9e876;
+}
+
+.footer .container .section .right div:nth-child(4) h6 {
+    color: #43cbfd;
+}
+
+.footer .container .section .right div h6:after {
+    content: "";
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    background-color: #bb1344;
+}
+
+.footer .container .section .right div:nth-child(2) h6:after {
+    background-color: #7fcb69;
+}
+
+.footer .container .section .right div:nth-child(3) h6:after {
+    background-color: #f9e876;
+}
+
+.footer .container .section .right div:nth-child(4) h6:after {
+    background-color: #43cbfd;
+}
+
+.footer .container .section .right div span {
+    color: #515252;
+}
+
+.copyright {
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    border-top: 1px solid #515252;
+    color: #515252;
+}
+
+/* End Footer */
